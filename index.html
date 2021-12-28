@@ -18,8 +18,10 @@
     function App() {
       const [counter, setCounter] = React.useState(0);
       const onClick = () => {
-        setCounter(counter + 1);
+        // setCounter(counter + 1);
+        setCounter((current) => current + 1);
       };
+      console.log("render");
       return (
         <div>
           <h3>Total clicks: {counter}</h3>
